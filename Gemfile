@@ -61,6 +61,8 @@ group :development, :test do
 end
 
 group :development do
+  gem "annotate"
+  gem "rails_live_reload"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -69,6 +71,4 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-
-  gem "rails_live_reload"
 end
