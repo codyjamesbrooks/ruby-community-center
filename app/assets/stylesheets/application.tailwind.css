@@ -2,12 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+
+  /* Form Wrappers */
+  .devise-form { @apply flex flex-col gap-4; }
+
+  /* Form Inputs */
+  input[type=password],
+  input[type=email],
+  input[type=text] {
+    @apply text-gray-900 text-sm;
+    @apply border border-gray-300 rounded-lg;
+    @apply bg-gray-50;
+    @apply focus:ring-blue-500 focus:border-blue-500;
+    @apply block w-full p-2.5;
   }
+  input[type="checkbox"] {
+    @apply text-blue-600;
+    @apply border-gray-300 rounded;
+    @apply bg-gray-100;
+    @apply focus:ring-blue-500 focus:ring-2;
+    @apply w-4 h-4;
+  }
+
+  /* Headings */
+  h1 { @apply text-5xl font-extrabold mb-10 text-center;  }
+
+  /* Buttons */
+  .button-primary {
+    @apply text-white font-medium text-sm text-center;
+    @apply rounded-lg;
+    @apply bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700;
+    @apply hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300;
+    @apply px-5 py-2.5 mr-2 mb-2;
+  }
+  .button-secondary {
+    @apply text-white font-medium text-sm;
+    @apply rounded-lg;
+    @apply bg-gray-800;
+    @apply hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300;
+    @apply px-5 py-2.5 mr-2 mb-2;
+  }
+
+  /* Links */
+  a { @apply font-medium text-blue-600 dark:text-blue-500 hover:underline; }
 }
 
-*/
