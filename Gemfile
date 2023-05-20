@@ -63,6 +63,7 @@ end
 group :development do
   gem "annotate"
   gem "rails_live_reload"
+  gem "letter_opener"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
