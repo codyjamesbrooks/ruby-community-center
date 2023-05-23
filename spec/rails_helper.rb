@@ -32,10 +32,6 @@ end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
   config.use_transactional_fixtures = true
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
@@ -61,5 +57,19 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  # Allow `f` syntax to focus indivdual tests
+  config.filter_run focus: true
+  config.run_all_when_everything_filtered = true
+
   config.include FactoryBot::Syntax::Methods
+
+  # Allow the use of path helpers within request specs
+  config.include Rails.application.routes.url_helpers, type: :request
+
+  # Define `sign_in` and `sign_out` methods within request specs
+  config.include DeviseRequestSpecHelpers, type: :request
+  include Warden::Test::Helpers
+
+  # Include all helper methods defined in Features module
+  config.include Features, type: :system
 end
