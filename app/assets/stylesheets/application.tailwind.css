@@ -46,5 +46,19 @@
 
   /* Links */
   a { @apply font-medium text-blue-600 dark:text-blue-500 hover:underline; }
+
+  /* Flashs */
+  .flash.notice {
+    @apply text-sm text-blue-800 text-center;
+    @apply rounded-lg;
+    @apply bg-blue-50;
+    @apply p-4;
+  }
+  .flash.alert {
+    @apply text-sm text-red-800 text-center;
+    @apply rounded-lg;
+    @apply bg-red-50;
+    @apply p-4;
+  }
 }
 
