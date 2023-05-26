@@ -1,0 +1,7 @@
+en:
+  application:
+    user_navigation:
+      user_account: "Account"
+      sign_out: "Sign Out"
+      login: "Log In"
+      sign_up: "Sign Up"

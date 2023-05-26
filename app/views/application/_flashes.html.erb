@@ -1,6 +1,7 @@
-<% if flash[:notice].present? %>
-  <p class="flash notice"><%= notice %></p>
-<% end %>
-<% if flash[:alert].present? %>
-  <p class="flash alert"><%= alert %></p>
+<% if flash.any? %>
+  <% flash.each do |key, value| -%>
+    <div class="flash <%= key %>-flash" data-role="flash">
+      <span class="flash-content"><%= value %></span>
+    </div>
+  <% end -%>
 <% end %>
