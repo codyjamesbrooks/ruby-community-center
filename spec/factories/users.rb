@@ -1,7 +1,14 @@
 FactoryBot.define do
+  sequence(:email) { |n| "user-#{n}@example.com" }
+
   factory :user do
-    email    { "test@example.com" }
-    password { "password" }
+    email
+    password   { "password" }
+    superadmin { false }
+
+    trait :superadmin do
+      superadmin { true }
+    end
   end
 end
 
@@ -15,6 +22,7 @@ end
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
+#  superadmin             :boolean          default(FALSE), not null
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
