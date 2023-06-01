@@ -1,0 +1,13 @@
+en:
+  admin:
+    unauthorized: &unauthorized You are not authorized to view this resource
+    dashboard:
+      index:
+        unauthorized: *unauthorized
+    users:
+      index:
+        unauthorized: *unauthorized
+      show:
+        unauthorized: *unauthorized
+      edit:
+        unauthorized: *unauthorized

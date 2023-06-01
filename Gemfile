@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby File.read(".ruby-version").strip
 
+gem "activeadmin"
 gem "bootsnap", require: false
 gem "dartsass-rails"
 gem "devise"
