@@ -1,6 +1,6 @@
 ActiveAdmin.register User do
   menu priority: 2
-  actions :all, except: [:new]
+  actions :all, except: [:new, :create]
 
   filter :email
 
